@@ -1,0 +1,52 @@
+# ===== Unreal Engine C++ Project Git Ignore =====
+
+# Visual Studio / IDE files
+.vs/
+*.vcxproj*
+*.sln
+*.user
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# Visual Studio IntelliSense caches
+**/*.ipch/
+**/*.pch
+
+# Xcode
+*.xcworkspace
+*.xcuserstate
+*.xcodeproj
+
+# Build artifacts & caches
+/Binaries/
+/Build/
+/DerivedDataCache/
+/Intermediate/
+/Saved/
+
+# Auto-generated logs, archives, dumps
+*.log
+*.gz
+*.zip
+*.dmp
+
+# Unreal auto-generated asset registry & config caches
+*.usermap
+*.userprefs
+
+# macOS
+.DS_Store
+
+# Ignore local config overrides
+/Config/*.local
+
+# Editor backups
+*_Backup.*
+
+# Git LFS pointer files (if you track large assets via LFS)
+/*.uasset
+/*.umap
+
+# End of file

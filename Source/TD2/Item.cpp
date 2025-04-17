@@ -8,7 +8,7 @@
 // Sets default values
 AItem::AItem()
 {
-	Mesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
+	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LaserMesh"));
 	RootComponent = Mesh;
 
 	Mesh->OnComponentBeginOverlap.AddDynamic(this, &AItem::OnOverLapBegin);

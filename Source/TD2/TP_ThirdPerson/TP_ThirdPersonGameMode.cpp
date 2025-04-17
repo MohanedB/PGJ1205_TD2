@@ -53,6 +53,7 @@ void ATP_ThirdPersonGameMode::Tick(float DeltaTime)
 	{
 		GEngine->AddOnScreenDebugMessage(2, 1.f, FColor::Red, FString::Printf(TEXT("Time : %f"), time));		
 		GEngine->AddOnScreenDebugMessage(3, 1.f, FColor::Green, FString::Printf(TEXT("Score : %f"), score));
+		GEngine->AddOnScreenDebugMessage(4, 1.f, FColor::Green, FString::Printf(TEXT("BestTime : %f"), besttime));
 
 	}
 	if (bTimerIsRunning)
@@ -70,6 +71,11 @@ void ATP_ThirdPersonGameMode::StartTimer()
 void ATP_ThirdPersonGameMode::EndTimer()
 {
 	bTimerIsRunning = false;
+
+	if (time > 0.0f && time > besttime)
+	{
+		besttime = time;
+	}
 }
 
 void ATP_ThirdPersonGameMode::ResetTimer()
@@ -87,3 +93,5 @@ void ATP_ThirdPersonGameMode::ResetScore()
 {
 	score = 0;
 }
+
+

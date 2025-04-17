@@ -34,6 +34,9 @@ public:
 	float time;
 
 	UPROPERTY(VisibleAnywhere, Category = "Timer")
+	float besttime=0.0;
+
+	UPROPERTY(VisibleAnywhere, Category = "Timer")
 	bool bTimerIsRunning;
 
 	UPROPERTY(VisibleAnywhere, Category = "Score")
